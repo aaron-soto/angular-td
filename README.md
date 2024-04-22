@@ -50,7 +50,7 @@ Here are some of the standout features of the project:
 
 Include some screenshots of your project. This could be GIFs or images showing how it works and looks.
 
-![Screenshot 1 Description](https://s3.amazonaws.com/ayezee-portfolio-assets/tower-defense/tower-defense-screenshot_1.png)
+![Screenshot 1 Description](https://res.cloudinary.com/ayezee/image/upload/v1713829534/tower-defense-screenshot_1_azplcr.png)
 
 ## Getting Started 🚀
 
