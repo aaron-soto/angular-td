@@ -252,13 +252,21 @@ canvas {
   }
 }
 
-span.version {
+a.version {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 0.5rem;
+  padding: 0.75rem 1.5rem;
   background-color: #000;
   color: #fff;
   font-size: medium;
   letter-spacing: 0.075em;
+  cursor: pointer;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+
+  &:hover {
+    background-color: #1c1c1e;
+  }
 }
