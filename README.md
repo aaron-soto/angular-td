@@ -1,54 +1,90 @@
-<div align="center">
-  <h3 align="center">Angular Tower Defense</h3>
+# Tower Defense 🚀
 
-  <p align="center">
-    This is a re-make of an old game I made using just html, css and javsacript. This version is more complete and polished than the last.
-    <br />
-    <a href="https://github.com/aaron-soto/angular-tower-defense"><strong>Explore the code »</strong></a>
-    <br />
-    <br />
-    <a href="https://angular-tower-defense.vercel.app/">View Live Demo</a>
-    ·
-    <a href="https://github.com/aaron-soto/terminal-app/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=Issue%3A+Bug+report+%F0%9F%90%9E">Report Bug</a>
-    ·
-    <a href="https://github.com/aaron-soto/terminal-app/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=Issue%3A+Feature+Request+%F0%9F%9A%80">Request Feature</a>
-  </p>
-</div>
+## Introduction 👋
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#⚠️-attention">Attention</a></li>
-    <li><a href="#⚙️-installation">Installation</a></li>
-    <li><a href="#✨-features">Features</a></li>
-    <li><a href="#👍-contribute">Contribute</a></li>
-    <li><a href="#🖥️-development">Development</a></li>
-  </ol>
-</details>
+Welcome to my project, **Angular Tower Defense**! This project is part of my personal portfolio. I designed and built this to demonstrate my skills and growth as a developer. Here, you'll find details about the project, how to set it up locally, and the technologies I used.
 
-## ⚙️ Installation
+Feel free to check out the [previous live version here](!https://aaron-soto.github.io/tower-defense/) or the code for that project [here](!https://github.com/aaron-soto/tower-defense).
 
-This terminal can be ran by downloading the code. The project can be ran using:
+## Table of Contents 📚
 
-### npm start
+- [Introduction](#introduction-)
+- [Table of Contents](#table-of-contents-)
+- [Project Overview](#project-overview-)
+- [Technologies Used](#technologies-used-)
+- [Features](#features-)
+- [Screenshots](#screenshots-)
+- [Getting Started](#getting-started-)
+- [Code Structure](#code-structure-)
+- [Contributions](#contributions-)
+- [License](#license-)
+- [Contact Info](#contact-info-)
 
-```shell
-npm run start
+## Project Overview 📖
+
+Welcome to my Angular Tower Defense game! This interactive game challenges players to strategically place defense towers to protect their base from waves of advancing enemies. Utilizing the A\* pathfinding algorithm, enemies dynamically navigate from their base towards the player's base, recalculating their routes whenever a tower obstructs their path.
+
+Players can engage with a robust tower system, where they can select, place, and upgrade towers using currency earned by defeating enemies. Each tower has unique capabilities and stats, which can be viewed by clicking on the towers in-game. The difficulty escalates with each wave, introducing progressively tougher enemies, demanding keen strategic planning and resource management.
+
+This project not only showcases real-time strategy elements but also demonstrates complex algorithm implementation and state management in Angular, offering an engaging and challenging experience for players. Dive into the game to test your tactical skills and defend your base against the relentless waves of enemies!
+
+## Technologies Used 🛠️
+
+List all the technologies, libraries, and tools you used to create the project. This might include:
+
+- **JavaScript**
+- **Angular**
+- **SCSS**
+- **FontAwesome** (Game Icons)
+- **Vercel** (Deployment)
+
+## Features ✨
+
+Here are some of the standout features of the project:
+
+- Feature 1: Description
+- Feature 2: Description
+- Feature 3: Description
+
+## Screenshots 📸
+
+Include some screenshots of your project. This could be GIFs or images showing how it works and looks.
+
+![Screenshot 1 Description](https://ayezee-portfolio-assets.s3.us-east-1.amazonaws.com/tower-defense/tower-defense-screenshot_1.png)
+
+## Getting Started 🚀
+
+In order to download the code and run this game locally use the following:
+
+```bash
+git clone https://github.com/aaron-soto/angular-tower-defense.git
+cd angular-tower-defense
+npm install
+npm start
 ```
 
-## ✨ Features
+## Code Structure 🗂️
 
-- Dynamic Levels that go on as long as the user can survive
-- Enemies that get harder with higher levels
+Discuss the structure of your code, focusing on how you organized it. This helps potential employers or contributors understand your thought process and approach.
 
-## 👍 Contribute
+## Contributions 🤝
 
-If you want to say Thank You and/or support the active development of this web terminal:
+If you are open to contributions, specify how others can contribute. You might include:
 
-1. Add a GitHub Star to the project.
-2. Support the project by donating a cup of coffee.
+- Information on submitting bugs
+- Features requests
+- Pull requests guidelines
 
-## 🖥️ Development
+## License ⚖️
 
-These are the features that I will be implementing in the future, if you have ideas I am always open to new ideas that I can code!
+Specify the license under which your project is made available. This could be:
+
+\```plaintext
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
+\```
+
+## Contact Info ☎️
+
+Let others know how they can reach you if they have questions or want to connect with you. Include your email, LinkedIn profile, or other relevant contact information.
+
+Thank you for checking out my project! I hope you find it interesting and feel free to reach out if you have any questions or suggestions!
