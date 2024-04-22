@@ -42,13 +42,21 @@ List all the technologies, libraries, and tools you used to create the project. 
 
 Here are some of the standout features of the project:
 
-- Feature 1: Description
-- Feature 2: Description
-- Feature 3: Description
+This tower defense game is packed with engaging features that enhance gameplay and provide a challenging strategic experience:
+
+- **Dynamic Pathfinding**: Enemies use the A\* algorithm to navigate the battlefield, updating their paths dynamically when obstacles (towers) are placed, showcasing advanced AI behavior in gameplay.
+
+- **Interactive Tower System**: Players can select from a variety of towers, each with unique abilities and upgrade options. Towers can be placed strategically to defend against enemies, and players can click on towers to view detailed information about their capabilities.
+
+- **Economic Strategy**: A robust money system is integrated, where players earn currency by defeating enemies. This currency can be used to purchase and upgrade towers, adding a layer of strategic financial management to the game.
+
+- **Progressive Difficulty**: The game features an automated wave system that gradually increases in difficulty, challenging players to continuously improve their strategies and tower placements as they advance through higher levels.
+
+- **Real-time Strategy Elements**: Real-time decisions are crucial in this game since placing a tower in the way of enemies will change their path, requiring players to think quickly and adapt their strategies to evolving scenarios and enemy tactics.
+
+- **Engaging User Interface**: A user-friendly and visually appealing interface that provides smooth navigation and accessibility, enhancing player interaction and overall experience.
 
 ## Screenshots 📸
-
-Include some screenshots of your project. This could be GIFs or images showing how it works and looks.
 
 ![Screenshot 1 Description](https://res.cloudinary.com/ayezee/image/upload/v1713829534/tower-defense-screenshot_1_azplcr.png)
 
@@ -56,35 +64,23 @@ Include some screenshots of your project. This could be GIFs or images showing h
 
 In order to download the code and run this game locally use the following:
 
-```bash
+```shell
 git clone https://github.com/aaron-soto/angular-tower-defense.git
 cd angular-tower-defense
 npm install
 npm start
 ```
 
-## Code Structure 🗂️
-
-Discuss the structure of your code, focusing on how you organized it. This helps potential employers or contributors understand your thought process and approach.
-
 ## Contributions 🤝
 
-If you are open to contributions, specify how others can contribute. You might include:
+- Please use [this Link](https://github.com/aaron-soto/angular-tower-defense/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=Issue%3A+Bug+report+%F0%9F%90%9E) to report a bug
 
-- Information on submitting bugs
-- Features requests
-- Pull requests guidelines
+- Please use [this link](https://github.com/aaron-soto/angular-tower-defense/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=Issue%3A+Feature+Request+%F0%9F%9A%80) to request a feature
 
 ## License ⚖️
 
-Specify the license under which your project is made available. This could be:
+This project is licensed under the MIT License
 
-\```plaintext
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
-\```
-
-## Contact Info ☎️
-
-Let others know how they can reach you if they have questions or want to connect with you. Include your email, LinkedIn profile, or other relevant contact information.
+<hr>
 
 Thank you for checking out my project! I hope you find it interesting and feel free to reach out if you have any questions or suggestions!
