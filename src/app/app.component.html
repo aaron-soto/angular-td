@@ -1,0 +1,62 @@
+<div class="game-wrapper">
+  <div class="buttons">
+    <button (click)="toggleGame()">
+      {{ isGamePaused ? "Play" : "Pause" }}
+    </button>
+
+    <button (click)="openSettings()">Settings</button>
+  </div>
+  <div class="stats">
+    <span>Wave: {{ waveNumber }}</span>
+    <span #healthBar class="health-bar">Health: {{ playerHealth }}</span>
+    <span>Money: ${{ playerMoney }}</span>
+  </div>
+  <div class="canvas-wrapper">
+    <div class="paused-modal" *ngIf="isGamePaused">
+      <h2>Game Paused</h2>
+      <i (click)="toggleGame()" class="fa-solid fa-pause"></i>
+      <button (click)="toggleGame()">Resume</button>
+    </div>
+
+    <canvas
+      (mousemove)="onMouseMove($event)"
+      (click)="onLeftClick($event)"
+      (contextmenu)="onRightClick($event)"
+      [class.isPaused]="isGamePaused"
+      #gameCanvas
+      width="800"
+      height="600"
+    ></canvas>
+  </div>
+  <div class="currently-selected">
+    <div class="header">
+      <p>Currently selected: {{ currentlySelected?.name || "None" }}</p>
+      <p>Level 1</p>
+    </div>
+  </div>
+  <div class="buttons">
+    <button
+      *ngFor="let tower of towers"
+      [disabled]="playerMoney < tower.cost"
+      [class.active]="currentlySelected.type === tower.id"
+      (click)="selectTowerToPlace(tower)"
+    >
+      {{ tower.name }}
+      <span class="cost">${{ tower.cost }}</span>
+    </button>
+  </div>
+</div>
+
+<div class="dev-buttons" *ngIf="environment.isDevMode">
+  <button (click)="decreaseMoney()">-$5</button>
+  <button (click)="increaseMoney()">+$5</button>
+  <button (click)="decreaseHealth()">-10</button>
+  <button (click)="increaseHealth()">+10</button>
+</div>
+
+<!-- <div class="toasts">
+  <div class="toast">
+    <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+    <p>Wave Complete!</p>
+  </div>
+</div> -->

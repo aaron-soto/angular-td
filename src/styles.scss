@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0c0c0c;
+}
+
+html {
+  font-size: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+canvas {
+  @extend .main-border;
+  cursor: pointer;
+  position: relative;
+  width: 800px;
+  height: 600px;
+
+  &.isPaused {
+    &::after {
+      content: "Paused"; // Adding visible content for testing
+      position: absolute;
+      inset: 0;
+      font-size: 2rem;
+      color: white; // Changing color for visibility
+      background-color: black;
+      display: block;
+      z-index: 2; // Increased z-index for testing
+    }
+  }
+}
+
+.main-border {
+  border: 2.5px solid #ffffff;
+  border-radius: 4px;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 800px;
+  margin: 0 auto;
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 0;
+
+    button {
+      @extend .main-border;
+      padding: 1rem;
+      width: 100%;
+      background-color: #000;
+      color: #fff;
+      letter-spacing: 0.1ch;
+      font-size: larger;
+      text-align: left;
+      cursor: pointer;
+      border-radius: 4px;
+      display: flex;
+
+      .cost {
+        display: inline-block;
+        margin-left: auto;
+      }
+
+      &:disabled {
+        background-color: #1c1c1e83;
+        opacity: 0.6;
+        color: #6666665f;
+        cursor: not-allowed;
+      }
+
+      &:not(:disabled):hover {
+        background-color: #1c1c1e;
+      }
+
+      &.active {
+        background-color: #1c1c1e;
+      }
+    }
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    padding-bottom: 1rem;
+
+    span {
+      @extend .main-border;
+      padding: 0.4rem 1rem;
+      // background-color: #fff;
+      color: #fff;
+      border-radius: 4px;
+      font-size: larger;
+    }
+
+    .health-bar {
+      position: relative;
+      z-index: 2;
+      background-color: #38383e;
+      color: #ffffff;
+
+      --health-bar-color: green;
+      --health-bar-width: 100%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: var(--health-bar-width);
+        background-color: var(--health-bar-color);
+      }
+    }
+  }
+
+  .currently-selected {
+    @extend .main-border;
+    font-size: larger;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: #fff;
+    background-color: #38383e;
+
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    p {
+      &:first-of-type {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.dev-buttons {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+
+  span {
+    @extend .main-border;
+    padding: 0.5rem 1.4rem;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  button {
+    @extend .main-border;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 1.4rem;
+    font-size: larger;
+    cursor: pointer;
+  }
+}
+
+.toasts {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+
+  .toast {
+    width: 300px;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 5px solid #90be6d;
+    color: #000;
+    margin: 0.5rem;
+    position: relative;
+
+    .close-btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 40px;
+      width: 40px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.canvas-wrapper {
+  position: relative;
+
+  .paused-modal {
+    position: absolute;
+    top: 2.5px;
+    bottom: 7.5px;
+    left: 2.5px;
+    width: calc(100% - 5px);
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: #ffffff;
+    gap: 1rem;
+
+    i.fa-pause {
+      font-size: 4rem;
+      cursor: pointer;
+    }
+
+    button {
+      @extend .main-border;
+      padding: 1rem;
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+      display: flex;
+      gap: 1rem;
+      font-size: larger;
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
