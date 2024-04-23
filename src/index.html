@@ -5,7 +5,49 @@
     <title>Tower Defense</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Tower Defense" />
+    <meta name="theme-color" content="#1976d2" />
+
+    <link rel="manifest" href="/assets/manifest.webmanifest" />
+
+    <!-- Apple specific tags -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicons/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="App Title" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <!-- Microsoft specific tags -->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <!-- Adjust the color to match your app's theme -->
+    <meta
+      name="msapplication-TileImage"
+      content="/assets/favicons/mstile-150x150.png"
+    />
+    <meta name="msapplication-config" content="/assets/browserconfig.xml" />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicons/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+
     <script
       src="https://kit.fontawesome.com/8a05dd154b.js"
       crossorigin="anonymous"
@@ -13,5 +55,8 @@
   </head>
   <body>
     <app-root></app-root>
+    <noscript
+      >Please enable JavaScript to continue using this application.</noscript
+    >
   </body>
 </html>
